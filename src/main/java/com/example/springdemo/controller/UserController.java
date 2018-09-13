@@ -1,16 +1,18 @@
 package com.example.springdemo.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+
+import java.util.Map;
 
 @Controller
+@RequestMapping("/")
 public class UserController {
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String showWelcomePage(ModelMap model) {
-        System.out.println(111);
-        model.put("name", "alan");
+
+    @GetMapping()
+    public String showWelcomePage(Map<String, Object> map) {
+        map.put("name", "alan");
         return "welcome";
     }
 }
