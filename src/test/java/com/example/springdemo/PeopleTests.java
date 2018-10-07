@@ -7,6 +7,7 @@ import org.junit.Test;
 
 import java.io.File;
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -49,6 +50,7 @@ public class PeopleTests {
         for(Field field:filedArr){
             System.out.printf(field.getName() + "\n");
         }
+
     }
 
 }
